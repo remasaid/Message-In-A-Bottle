@@ -38,4 +38,4 @@ jspm_packages
 
 *data/*
 keys.js
-src/config.js
+client/src/config.js
