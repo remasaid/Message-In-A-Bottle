@@ -4,6 +4,7 @@ import Signin from './Signin'
 import axios from 'axios'
 import { Tabs, Tab } from 'react-materialize';
 import Notifications, { notify } from 'react-notify-toast';
+import config from './config.js'
 
 class Landing extends Component {
 
