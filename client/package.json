@@ -1,0 +1,28 @@
+{
+  "name": "message-in-a-bottle",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^2.13.10",
+    "axios": "^0.17.1",
+    "get-dependencies": "^1.1.0",
+    "gsap": "^1.20.3",
+    "react": "^16.1.1",
+    "react-alert": "^2.4.0",
+    "react-bootstrap": "^0.31.5",
+    "react-dom": "^16.1.1",
+    "react-materialize": "^1.1.0",
+    "react-notify-toast": "^0.4.0",
+    "react-responsive-carousel": "^3.1.28",
+    "react-router-bootstrap": "^0.24.4",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "reshake": "^1.0.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
