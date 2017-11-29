@@ -1,8 +1,9 @@
+import config from './config.js'
 import React, { Component } from 'react';
 import axios from 'axios'
 import Header from './Header'
 import InboxList from './InboxList'
-var ReactDOM = require('react-dom');
+import ReactDOM from 'react-dom'
 
 class Inbox extends Component {
 
@@ -14,7 +15,7 @@ class Inbox extends Component {
     }
     componentDidMount() {
 
-        let baseURL = 'http://localhost:8080/inbox'
+        let baseURL = config.url + '/inbox/'
         axios({
             method: 'get',
             url: baseURL,
@@ -39,7 +40,7 @@ class Inbox extends Component {
 
     filterMessages=(e, param)=>{
         
-        let baseURL = 'http://localhost:8080/inbox/'
+        let baseURL = config.url + '/inbox'
         axios({
             method: 'get',
             url: baseURL,

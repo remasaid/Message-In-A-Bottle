@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Card, Input, Row } from 'react-materialize';
 import Header from './Header'
 import Notifications, { notify } from 'react-notify-toast';
-
+import config from './config.js'
 class Create extends Component {
 
 
@@ -21,7 +21,7 @@ class Create extends Component {
             replyTones.push(check.value);
         })
         console.log(replyTones);
-        let baseURL = 'http://localhost:8080/create'
+        let baseURL = config.url + '/create'
         axios({
             method: 'post',
             url: baseURL,
@@ -70,7 +70,7 @@ class Create extends Component {
             <div>
                 <Notifications />
                 <Header />
-                <h3>Create a new message</h3>
+                <h3 className="create-header">Create a new message</h3>
                 <div className="new-message">
                     <Card className='medium'
                         actions={[<a role="button" onClick={this.sendMessage}>Send Message</a>]}>

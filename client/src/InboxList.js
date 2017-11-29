@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { Button, Icon, Modal } from 'react-materialize';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
+import config from './config.js'
 
 class InboxList extends Component {
 
@@ -14,7 +15,7 @@ class InboxList extends Component {
     componentDidMount() {
         if(this.props.message._id !== undefined)
         {
-        let baseURL = 'http://localhost:8080/replies/' + this.props.message._id
+        let baseURL = config.url + '/replies/' + this.props.message._id
         console.log(baseURL);
         axios({
             method: 'get',

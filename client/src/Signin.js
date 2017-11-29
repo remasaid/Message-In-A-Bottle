@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { Card, Input, Row } from 'react-materialize';
 import Notifications, { notify } from 'react-notify-toast';
-
+import config from './config.js'
 
 class Signin extends Component {
     submitHandler = (event) => {
         event.preventDefault();
         let userName = document.querySelector('input[name=login_userName]').value;
         let password = document.querySelector('input[name=login_password]').value;
-        let baseURL = 'http://localhost:8080/login'
+        let baseURL = config.url + '/login'
 
         let myColor = { background: '#ff80ab', text: "#FFFFFF" };
         

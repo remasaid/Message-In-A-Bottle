@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { Card, Input } from 'react-materialize';
 import Notifications, { notify } from 'react-notify-toast';
+import config from './config.js'
 
 class Signup extends Component {
     submitHandler = (event) => {
@@ -29,7 +30,7 @@ class Signup extends Component {
         }
         else {
             
-            let baseURL = 'http://localhost:8080/signup'
+            let baseURL = config.url + '/signup'
             console.log(userName, password, location);
             axios.post(baseURL, { username: userName, password: password, location: location })
                 .then(res => {

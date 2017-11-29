@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Button, Icon, Modal } from 'react-materialize';
 import Bottle from './bottle'
 import Notifications, { notify } from 'react-notify-toast';
+import config from './config.js'
 
 class Message extends Component {
 
@@ -12,7 +13,7 @@ class Message extends Component {
         e.preventDefault()
         let message = this.refs.messageText.value
         console.log(message);
-        let baseURL = 'http://localhost:8080/reply/' + this.props.message._id
+        let baseURL = config.url + '/reply/' + this.props.message._id
         axios({
             method: 'post',
             url: baseURL,

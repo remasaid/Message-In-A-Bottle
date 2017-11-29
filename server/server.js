@@ -4,9 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const myApiKey = require('./keys.js');
-
-console.log(myApiKey);
+const myApiKey = require('../keys.js');
 
 const Message = require('./models/Message');
 const User = require('./models/User');
@@ -15,7 +13,9 @@ const Reply = require('./models/Reply');
 var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
 
 var tone_analyzer = new ToneAnalyzerV3({
-    myApiKey;
+    username: myApiKey.username,
+    password: myApiKey.password,
+    version_date: myApiKey.version_date
 });
 
 getTone = (text) => {
@@ -45,7 +45,7 @@ return jwt.sign(payload, secretKey);
 
 }
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 //add body parsing to our server so that our endpoints can access req.body
 app.use(express.json());
@@ -409,4 +409,9 @@ app.post('/login', (req, res) => {
             userAccount = null;
         })
 });
-
+//serves any files within the build folder
+app.use(express.static(__dirname+'/build'))
+//allows a request to index.html to be made 
+app.get('*', (req, res) => {
+    res.sendFile(__dirname+'/build/index.html')
+})
