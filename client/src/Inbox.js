@@ -40,7 +40,7 @@ class Inbox extends Component {
 
     filterMessages=(e, param)=>{
         
-        let baseURL = config.url + '/inbox'
+        let baseURL = config.url + '/inbox/'
         axios({
             method: 'get',
             url: baseURL,

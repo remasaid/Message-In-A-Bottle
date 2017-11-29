@@ -10,7 +10,7 @@ class Landing extends Component {
 
     render() {
         if (localStorage.getItem('token') !== null) {
-            let baseURL = 'http://127.0.0.1:8080/validtoken'
+            let baseURL = config.url + '/validtoken'
             axios({
                 method: 'post',
                 url: baseURL,
