@@ -3,6 +3,7 @@ import axios from 'axios'
 import List from './List'
 import Header from './Header'
 import Legend from './Legend'
+import config from './config.js'
 
 class Homepage extends Component {
 
@@ -14,7 +15,7 @@ class Homepage extends Component {
     }
     componentDidMount() {
 
-        let baseURL = 'http://127.0.0.1:8080/messages/'
+        let baseURL = config.url + '/messages/'
         axios({
             method: 'get',
             url: baseURL,
@@ -39,7 +40,7 @@ class Homepage extends Component {
 
     filterMessages=(e, param)=>{
         
-        let baseURL = 'http://127.0.0.1:8080/messages/'
+        let baseURL = config.url + '/messages/'
         axios({
             method: 'get',
             url: baseURL,
