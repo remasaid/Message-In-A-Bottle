@@ -7,7 +7,7 @@ class Header extends React.Component {
         event.preventDefault();
         localStorage.clear();
         window.location.href="/"
-       console.log('logged out');
+    
       }
 
     render() {

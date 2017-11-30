@@ -23,7 +23,7 @@ class App extends Component {
     //sign up state function 
   //this is triggered when you actually sign up
   signUpStateHandler = (username) => {
-    console.log(username)
+   
     this.setState({
       loggedIn: true,
       loggedInUser: username,

@@ -61,7 +61,7 @@ class Homepage extends Component {
     render() {
 
         const data = this.state.data;
-        console.log(data);
+      
         return (
             <div>
                 <Header />

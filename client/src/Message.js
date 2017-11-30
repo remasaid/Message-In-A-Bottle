@@ -12,7 +12,7 @@ class Message extends Component {
     submitReply = (e) => {
         e.preventDefault()
         let message = this.refs.messageText.value
-        console.log(message);
+      
         let baseURL = config.url + '/reply/' + this.props.message._id
         axios({
             method: 'post',
@@ -75,7 +75,7 @@ class Message extends Component {
             </div>
         }
 
-        console.log(this.props.data)
+      
         return (
             <div >
                 <Notifications />

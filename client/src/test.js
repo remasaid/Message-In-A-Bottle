@@ -10,4 +10,4 @@ return newStr
 }
 
 
-console.log(reverse());
+

@@ -15,12 +15,12 @@ class Signup extends Component {
         let myColor = { background: '#ff80ab', text: "#FFFFFF" };
         if(userName.length < 5) {
             notify.show('You must choose a username of at least 6 characters', "custom", 5000, myColor)
-            console.log(userName.length)
+        
         }
         else if (password !== passwordCheck) {
 
             notify.show('The passwords you entered do not match', "custom", 5000, myColor)
-            console.log(userName); 
+          
         }
         else if (password.length < 5){
             notify.show('Your password must be at least 6 characters long.', "custom", 5000, myColor)
@@ -31,10 +31,10 @@ class Signup extends Component {
         else {
             
             let baseURL = config.url + '/signup'
-            console.log(userName, password, location);
+          
             axios.post(baseURL, { username: userName, password: password, location: location })
                 .then(res => {
-                    console.log("token: " + res.data);
+              
                     localStorage.setItem('token', res.data);
                     window.location.href = '/homepage'
                     // this.props.signUpStateHandler(respond.data)

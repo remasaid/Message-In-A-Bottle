@@ -14,13 +14,13 @@ class Create extends Component {
 
 
         let message = document.querySelector('textarea[name=messageText]').value
-        console.log("Message: " + message)
+      
         let replies = document.querySelector('input[name=replies]:checked').value
         let replyTones = [];
         Array.prototype.forEach.call(document.querySelectorAll('input[name=replytones]:checked'), function (check) {
             replyTones.push(check.value);
         })
-        console.log(replyTones);
+    
         let baseURL = config.url + '/create'
         axios({
             method: 'post',

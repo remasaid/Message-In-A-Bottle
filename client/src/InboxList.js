@@ -16,14 +16,14 @@ class InboxList extends Component {
         if(this.props.message._id !== undefined)
         {
         let baseURL = config.url + '/replies/' + this.props.message._id
-        console.log(baseURL);
+      
         axios({
             method: 'get',
             url: baseURL,
             headers: { 'authorization': localStorage.getItem('token') }
         })
             .then(res => {
-                console.log(res.data)
+             
                 return this.setState({
                     replydata: res.data
                 })

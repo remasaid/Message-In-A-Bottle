@@ -7,7 +7,7 @@ class bottle extends Component {
 
     render() {
         let id = this.props.id;
-        console.log(id);
+      
         setTimeout(function(){
             var container = document.querySelector('.container_' + id),waveTop = document.querySelector('.waveTop_'+id),waveMid = document.querySelector('.waveMid_'+id),waveBot = document.querySelector('.waveBot_' + id), bottle = document.querySelector('.bottle_'+id), bottleMask = document.querySelector('.bottleMask_' + id)
             
