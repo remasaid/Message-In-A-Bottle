@@ -243,7 +243,7 @@ app.get('/messages', (req, res) => {
 
 //get messages in inbox
 //need to figure out how to input user id here
-app.get('/inbox', (req, res) => {
+app.get('/getinbox', (req, res) => {
     let tokenFromHeader = req.headers["authorization"];
     jwt.verify(tokenFromHeader, secretKey, (err, decodedPayload) => {
         if (err) {

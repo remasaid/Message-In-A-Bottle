@@ -15,7 +15,7 @@ class Homepage extends Component {
     }
     componentDidMount() {
 
-        let baseURL = config.url + '/messages/'
+        let baseURL = config.url + '/messages'
         axios({
             method: 'get',
             url: baseURL,
@@ -40,7 +40,7 @@ class Homepage extends Component {
 
     filterMessages=(e, param)=>{
         
-        let baseURL = config.url + '/messages/'
+        let baseURL = config.url + '/messages'
         axios({
             method: 'get',
             url: baseURL,
