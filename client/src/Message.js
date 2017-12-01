@@ -51,10 +51,11 @@ class Message extends Component {
                     trigger={<div><Bottle id={this.props.message._id} tone={this.props.message.tone} /></div>}>
                     <div>
                         <div className="location">{this.props.message.location}</div>
-                        <form action="#">
+                        <div className="reply-form">
+                        <form action="#" onSubmit={this.submitReply}>
                             <input placeholder="Type your reply here :)" type="text" ref="messageText" /><br />
-                            {/* <input type="hidden" value= {this.props.message._id} /> */}
                         </form>
+                        </div>
                     </div>
 
                 </Modal>

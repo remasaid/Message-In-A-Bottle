@@ -73,7 +73,6 @@ class Homepage extends Component {
       <div><span className="anger box" ></span><p onClick={(e) => this.filterMessages(e, 'Anger')}>Anger</p></div>
       <div><span className="joy box"></span><p onClick={(e) => this.filterMessages(e, 'Joy')}>Joy</p></div>
       <div><span className="sadness box"></span><p onClick={(e) => this.filterMessages(e, 'Sadness')}>Sadness</p></div>
-      <div><span className="happy box"></span><p onClick={(e) => this.filterMessages(e, 'Happy')}>Happy</p></div>
       <div><span className="disgust box"></span><p onClick={(e) => this.filterMessages(e, 'Disgust')}>Disgust</p></div>
                 </div>
             </div>

@@ -212,7 +212,6 @@ app.get('/messages', (req, res) => {
             console.log(err);
             return res.status(401).json(err);
         }
-        console.log(req.headers["filter"]);
         if(req.headers["filter"] !== undefined)
         {
             console.log("filtering");
@@ -253,7 +252,6 @@ app.get('/getinbox', (req, res) => {
             return res.status(301).json('You are unauthorized');
 
         }
-        console.log(req.headers["filter"]);
         if(req.headers["filter"] !== undefined)
         {
             console.log("filtering");
