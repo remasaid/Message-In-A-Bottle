@@ -167,6 +167,14 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([reado
   padding: 16px;
   line-height: 1.3;
   word-break: break-word;
+  max-height: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: N;
+  line-height: X;
+  max-height: X*N;
 }
 
 .message-box .location{
